@@ -1,0 +1,55 @@
+.header {
+	background-color: $color-grey-dark-2;
+	grid-column: full-start / col-end 6;
+	background-image: linear-gradient(rgba($color-secondary, .93), rgba($color-secondary, .93)), url(../img/house1.jpg);
+	background-position: top;
+	background-size: cover;
+	padding: 8rem;
+	padding-top: 4rem;
+
+	display: grid;
+	grid-template-rows: 1fr min-content 6rem 1fr;
+	grid-row-gap: 1.5rem;
+	grid-template-columns: max-content;
+	justify-content: center;
+
+	&__logo {
+		height: 12rem;
+		justify-self: center;
+	}
+
+	&__seenon-text {
+		font-size: 1.4rem;
+		color: $color-grey-light-1;
+		display: grid;
+		grid-template-columns: 1fr max-content 1fr;
+		grid-gap: 1rem;
+		align-items: center;
+		filter: brightness(70%);
+
+		&::after,
+		&::before {
+			content: "";
+			display: block;
+			height: 1px;
+			background-color: $color-grey-light-2;
+		}
+	}
+
+	&__btn {
+		place-self: start;
+	}
+
+	&__seenon-logos {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 3rem;
+		justify-items: center;
+		filter: brightness(70%);
+
+		img {
+			height: 2.5rem;
+		}
+	}
+
+}

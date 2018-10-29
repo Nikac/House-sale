@@ -5,6 +5,12 @@
 
 	display: flex;
 	justify-content: center;
+
+	@media only screen and (max-width:$bp-large) {
+		grid-column: 1 / -1;
+		grid-row: 1 / 2; 
+		justify-content: flex-end;
+	}
 }
 
 .nav-btn {
@@ -28,14 +34,14 @@
 		border-radius: 4px;
 	}
 
-	&::after {
-		transform: translateY(-1.4rem);
-	}
+	&::after { transform: translateY(-1.4rem); }
 
-	&::before {
-		transform: translateY(1.1rem);
-	}
+	&::before { transform: translateY(1.1rem); }
 
+	@media only screen and (max-width: $bp-large) {
+		margin-top: 2.5rem;
+		margin-right: 3rem;
+	}
 }
 
 .nav-btn:active .sidebar {
